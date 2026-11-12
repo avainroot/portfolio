@@ -111,11 +111,11 @@ body {
   width: clamp(24rem, 52vw, 50rem);
   aspect-ratio: 1;
   border-radius: 50%;
-  filter: blur(clamp(3rem, 7vw, 6rem));
+  filter: blur(clamp(2.75rem, 6vw, 5.5rem));
   background: radial-gradient(
     circle,
-    rgba(120, 183, 245, 0.15) 0%,
-    rgba(120, 183, 245, 0.07) 38%,
+    rgba(120, 183, 245, 0.24) 0%,
+    rgba(120, 183, 245, 0.11) 38%,
     transparent 72%
   );
 }
@@ -131,8 +131,8 @@ body {
   width: clamp(22rem, 46vw, 44rem);
   background: radial-gradient(
     circle,
-    rgba(107, 166, 230, 0.13) 0%,
-    rgba(107, 166, 230, 0.06) 40%,
+    rgba(107, 166, 230, 0.21) 0%,
+    rgba(107, 166, 230, 0.1) 40%,
     transparent 72%
   );
 }
@@ -143,16 +143,16 @@ body {
   width: clamp(20rem, 42vw, 40rem);
   background: radial-gradient(
     circle,
-    rgba(120, 183, 245, 0.11) 0%,
-    rgba(120, 183, 245, 0.05) 42%,
+    rgba(120, 183, 245, 0.18) 0%,
+    rgba(120, 183, 245, 0.08) 42%,
     transparent 72%
   );
 }
 
 @media (max-width: 640px) {
   .ambient-glow {
-    width: min(82vw, 30rem);
-    filter: blur(3rem);
+    width: min(92vw, 32rem);
+    filter: blur(2.5rem);
   }
 
   .ambient-glow--north {

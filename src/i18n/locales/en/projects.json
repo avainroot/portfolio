@@ -1,5 +1,12 @@
 {
   "projects": {
+    "nsign": {
+      "role": "Frontend Developer",
+      "period": "July — September 2026",
+      "shortDescription": "React SPA migration to Next.js 16 and typed API integration.",
+      "description": "Worked on migrating the application from a React SPA to Next.js 16, updating state management, and integrating with the API.",
+      "contribution": "Migrated state management from Redux to Zustand and TanStack Query, set up typed API integration with hey-api/OpenAPI, and worked on SSR optimization."
+    },
     "harbour-space": {
       "role": "Frontend Developer",
       "shortDescription": "The Harbour.Space blog built with Next.js and Strapi.",

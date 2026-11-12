@@ -17,10 +17,6 @@ const selectedLanguage = supportedLanguages.includes(
   ? (browserLanguage as (typeof supportedLanguages)[number])
   : fallbackLanguage
 
-if (typeof document !== 'undefined') {
-  document.documentElement.lang = selectedLanguage
-}
-
 const resources = {
   ru: {
     projects: ruProjects.projects,
@@ -31,6 +27,18 @@ const resources = {
     site: enSite.site,
   },
 }
+
+const updateDocumentMetadata = (language: string) => {
+  if (typeof document === 'undefined') {
+    return
+  }
+
+  const normalizedLanguage = language.toLowerCase().startsWith('ru') ? 'ru' : 'en'
+  document.documentElement.lang = normalizedLanguage
+  document.title = resources[normalizedLanguage].site.meta.title
+}
+
+updateDocumentMetadata(selectedLanguage)
 
 void i18n.use(initReactI18next).init({
   resources,
@@ -44,9 +52,7 @@ void i18n.use(initReactI18next).init({
 })
 
 i18n.on('languageChanged', (language) => {
-  if (typeof document !== 'undefined') {
-    document.documentElement.lang = language.toLowerCase().startsWith('ru') ? 'ru' : 'en'
-  }
+  updateDocumentMetadata(language)
 })
 
 export const setLanguage = (language: 'ru' | 'en') => {

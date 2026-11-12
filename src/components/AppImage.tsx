@@ -10,10 +10,9 @@ interface AppImageProps {
   src: string
   alt: string
   className?: string
-  imageClassName?: string
 }
 
-export function AppImage({ src, alt, className, imageClassName }: AppImageProps) {
+export function AppImage({ src, alt, className }: AppImageProps) {
   const { t } = useTranslation()
   const [imageState, setImageState] = useState<{ src: string; state: AppImageState }>({
     src,
@@ -22,7 +21,10 @@ export function AppImage({ src, alt, className, imageClassName }: AppImageProps)
   const state = imageState.src === src ? imageState.state : 'loading'
 
   return (
-    <div className={cn('relative overflow-hidden rounded-none bg-surface-interactive', className)}>
+    <div
+      style={{ aspectRatio: '16 / 10' }}
+      className={cn('relative overflow-hidden rounded-none bg-surface-interactive', className)}
+    >
       {state !== 'loaded' && state !== 'error' && (
         <Skeleton className="absolute inset-0 h-full w-full rounded-none" aria-hidden="true" />
       )}
@@ -45,9 +47,8 @@ export function AppImage({ src, alt, className, imageClassName }: AppImageProps)
           onLoad={() => setImageState({ src, state: 'loaded' })}
           onError={() => setImageState({ src, state: 'error' })}
           className={cn(
-            'h-full w-full object-contain transition-opacity duration-300',
+            'h-full w-full object-cover transition-opacity duration-300',
             state === 'loaded' ? 'opacity-100' : 'opacity-0',
-            imageClassName,
           )}
         />
       )}

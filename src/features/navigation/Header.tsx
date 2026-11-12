@@ -16,16 +16,21 @@ export function Header({ language, onToggleLanguage }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-page items-center justify-between gap-4 px-4 py-4 sm:px-8 lg:px-10">
-        <div className="flex items-center gap-4">
-          <div className="font-mono text-lg font-semibold tracking-tight text-accent transition-colors hover:text-primary">
-            {t('header.logo', { defaultValue: 'AV.' })}
+      <div className="mx-auto flex max-w-page items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-8 lg:px-10">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex shrink-0 flex-col text-[13px] font-semibold uppercase leading-[1.15] tracking-tight text-accent sm:text-sm sm:leading-[1.25]">
+            <span className={language === 'en' ? 'tracking-[0.027em]' : undefined}>
+              {t('header.firstName')}
+            </span>
+            <span className={language === 'ru' ? 'tracking-[0.062em]' : undefined}>
+              {t('header.lastName')}
+            </span>
           </div>
           <div className="flex min-w-0 flex-col">
-            <span className="text-sm font-medium text-primary">
+            <span className="text-caption font-medium text-primary sm:text-sm">
               {t('header.role', { defaultValue: 'Frontend developer' })}
             </span>
-            <span className="font-mono text-micro uppercase tracking-editorial text-secondary">
+            <span className="font-mono text-[9px] uppercase tracking-normal text-secondary sm:text-micro sm:tracking-editorial">
               {t('header.stack', { defaultValue: 'React, TypeScript, Next.js' })}
             </span>
           </div>

@@ -1,19 +1,13 @@
+import { lazy, Suspense, useLayoutEffect, useRef } from 'react'
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 import { AppImage } from '@/components/AppImage'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselIndicators,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
 import { ScrollArea, ScrollAreaViewport } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
+import { Skeleton } from '@/components/ui/skeleton'
 import {
   Sheet,
   SheetContent,
@@ -25,6 +19,10 @@ import { projects } from '@/content/projects'
 import type { Project } from '@/content/types'
 import { usePortfolioStore } from '@/store/usePortfolioStore'
 
+const ProjectGallery = lazy(() =>
+  import('./ProjectGallery').then((module) => ({ default: module.ProjectGallery })),
+)
+
 interface ProjectSheetProps {
   project: Project
   isOpen: boolean
@@ -34,10 +32,17 @@ interface ProjectSheetProps {
 export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
   const { t } = useTranslation()
   const { activeProjectId, navigateProject } = usePortfolioStore()
+  const scrollViewportRef = useRef<HTMLDivElement>(null)
   const currentIndex = projects.findIndex((entry) => entry.id === activeProjectId)
   const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
   const period = project.periodKey ? t(project.periodKey, { ns: 'projects' }) : project.period
+
+  useLayoutEffect(() => {
+    if (scrollViewportRef.current) {
+      scrollViewportRef.current.scrollTop = 0
+    }
+  }, [project.id])
 
   return (
     <Sheet open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -57,14 +62,10 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
         </div>
 
         <ScrollArea className="min-h-0 flex-1">
-          <ScrollAreaViewport>
+          <ScrollAreaViewport ref={scrollViewportRef}>
             <div className="space-y-8 px-6 py-6">
               <div className="overflow-hidden rounded-none border border-border bg-surface-muted">
-                <AppImage
-                  src={project.cover}
-                  alt={project.title}
-                  className="aspect-[16/10] w-full"
-                />
+                <AppImage src={project.cover} alt={project.title} className="w-full" />
               </div>
 
               <div className="grid gap-6 md:grid-cols-project-details">
@@ -125,53 +126,20 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
               </div>
 
               {project.gallery.length > 0 && (
-                <div>
-                  <div className="mb-4 font-mono text-caption uppercase tracking-editorial text-secondary">
-                    {t('project.gallery', { defaultValue: 'Gallery' })}
-                  </div>
-
-                  <Carousel opts={{ loop: false }} className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className="hidden gap-2 md:flex">
-                          <CarouselPrevious
-                            aria-label={t('project.galleryPrevious', {
-                              defaultValue: 'Previous image',
-                            })}
-                          />
-                          <CarouselNext
-                            aria-label={t('project.galleryNext', { defaultValue: 'Next image' })}
-                          />
-                        </div>
-                        <CarouselIndicators
-                          label={t('project.gallery', { defaultValue: 'Gallery' })}
-                          getSlideLabel={(index) =>
-                            t('project.gallerySlide', {
-                              number: index + 1,
-                              defaultValue: `Slide ${index + 1}`,
-                            })
-                          }
-                        />
+                <Suspense
+                  fallback={
+                    <div aria-hidden="true" className="space-y-4">
+                      <Skeleton className="mb-4 h-3 w-16" />
+                      <Skeleton className="aspect-[16/10] w-full" />
+                      <div className="flex gap-2">
+                        <Skeleton className="h-6 w-6" />
+                        <Skeleton className="h-6 w-6" />
                       </div>
                     </div>
-
-                    <CarouselContent>
-                      {project.gallery.map((image, index) => (
-                        <CarouselItem key={`${project.id}-${index}`}>
-                          <AppImage
-                            src={image}
-                            alt={t('project.galleryImageAlt', {
-                              title: project.title,
-                              number: index + 1,
-                              defaultValue: `${project.title} screenshot ${index + 1}`,
-                            })}
-                            className="aspect-[16/10] w-full"
-                          />
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                  </Carousel>
-                </div>
+                  }
+                >
+                  <ProjectGallery key={project.id} project={project} />
+                </Suspense>
               )}
             </div>
           </ScrollAreaViewport>

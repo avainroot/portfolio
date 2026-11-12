@@ -40,8 +40,7 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         <AppImage
           src={project.cover}
           alt={project.title}
-          className="aspect-[16/10] w-full shrink-0 rounded-none border-b border-border bg-surface-muted"
-          imageClassName="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+          className="w-full shrink-0 rounded-none border-b border-border bg-surface-muted"
         />
 
         <CardHeader className="gap-4">

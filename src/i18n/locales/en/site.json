@@ -1,11 +1,15 @@
 {
   "site": {
     "header": {
-      "logo": "AV.",
+      "firstName": "Alexey",
+      "lastName": "Volkov",
       "role": "Frontend developer",
       "stack": "React, TypeScript, Next.js",
       "language": "EN",
       "projects": "Projects"
+    },
+    "meta": {
+      "title": "Alexey Volkov — Frontend Developer"
     },
     "about": {
       "title": "About",

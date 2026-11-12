@@ -4,8 +4,28 @@ const base = import.meta.env.BASE_URL
 
 export const projects: Project[] = [
   {
-    id: 'harbour-space',
+    id: 'nsign',
     number: '01',
+    title: 'Nsign',
+    company: 'Nsign',
+    periodKey: 'nsign.period',
+    roleKey: 'nsign.role',
+    shortDescriptionKey: 'nsign.shortDescription',
+    descriptionKey: 'nsign.description',
+    contributionKey: 'nsign.contribution',
+    technologies: ['React', 'Next.js 16', 'TypeScript', 'Zustand', 'TanStack Query', 'hey-api'],
+    website: 'https://nsign.ru/',
+    cover: `${base}images/nsign/cover.avif`,
+    gallery: [
+      `${base}images/nsign/cover.avif`,
+      `${base}images/nsign/detail-1.avif`,
+      `${base}images/nsign/detail-2.avif`,
+      `${base}images/nsign/detail-3.avif`,
+    ],
+  },
+  {
+    id: 'harbour-space',
+    number: '02',
     title: 'Harbour.Space Blog',
     company: 'Harbour.Space',
     roleKey: 'harbour-space.role',
@@ -18,11 +38,13 @@ export const projects: Project[] = [
     gallery: [
       `${base}images/harbour-space/cover.avif`,
       `${base}images/harbour-space/detail-1.avif`,
+      `${base}images/harbour-space/detail-2.avif`,
+      `${base}images/harbour-space/detail-3.avif`,
     ],
   },
   {
     id: 'seafood-shop',
-    number: '02',
+    number: '03',
     title: 'Seafood Shop',
     company: 'Seafood Shop',
     periodKey: 'seafood-shop.period',
@@ -48,6 +70,11 @@ export const projects: Project[] = [
     ],
     website: 'https://seafood-shop.ru/',
     cover: `${base}images/seafood-shop/cover.avif`,
-    gallery: [`${base}images/seafood-shop/cover.avif`, `${base}images/seafood-shop/detail-1.avif`],
+    gallery: [
+      `${base}images/seafood-shop/cover.avif`,
+      `${base}images/seafood-shop/detail-1.avif`,
+      `${base}images/seafood-shop/detail-2.avif`,
+      `${base}images/seafood-shop/detail-3.avif`,
+    ],
   },
 ]

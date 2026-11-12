@@ -1,11 +1,15 @@
 {
   "site": {
     "header": {
-      "logo": "AV.",
+      "firstName": "Алексей",
+      "lastName": "Волков",
       "role": "Frontend-разработчик",
       "stack": "React, TypeScript, Next.js",
       "language": "RU",
       "projects": "Проекты"
+    },
+    "meta": {
+      "title": "Алексей Волков — Frontend-разработчик"
     },
     "about": {
       "title": "О себе",
