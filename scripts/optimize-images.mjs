@@ -55,7 +55,7 @@ async function main() {
     const outputFile = path.join(outputDir, `${fileName}.avif`)
 
     try {
-      await sharp(imagePath).avif({ quality: 62, effort: 5 }).toFile(outputFile)
+      await sharp(imagePath).avif({ quality: 75, effort: 5 }).toFile(outputFile)
       console.log(`Generated ${path.relative(projectRoot, outputFile)}`)
     } catch (error) {
       console.error(`Failed to optimize ${relativePath}:`, error)

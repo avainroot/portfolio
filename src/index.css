@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-sans: 'Onest Variable', 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
   --text-micro: 0.625rem;
   --text-caption: 0.6875rem;
   --tracking-chip: 0.12em;
@@ -83,7 +85,7 @@
   --border: #30353b;
   --shadow: rgba(0, 0, 0, 0.24);
   color-scheme: dark;
-  font-family: 'Onest', 'Segoe UI', sans-serif;
+  font-family: 'Onest Variable', 'Segoe UI', sans-serif;
   background-color: var(--background);
   color: var(--primary);
   font-synthesis: none;
@@ -98,7 +100,6 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
   min-height: 100vh;
   background:
     radial-gradient(circle at top, rgba(120, 183, 245, 0.08), transparent 35%), var(--background);

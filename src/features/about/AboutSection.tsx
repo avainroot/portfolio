@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
 import { Separator } from '@/components/ui/separator'
-import { siteContent } from '@/content/site'
 
 export function AboutSection() {
   const { t } = useTranslation()
@@ -21,7 +20,7 @@ export function AboutSection() {
             })}
           </p>
           <p className="text-secondary">
-            {siteContent.specialization} · {siteContent.stack.join(' · ')}
+            {t('header.role')} · {t('header.stack')}
           </p>
         </div>
       </div>

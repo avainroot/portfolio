@@ -37,19 +37,21 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
   const currentIndex = projects.findIndex((entry) => entry.id === activeProjectId)
   const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
+  const period = project.periodKey ? t(project.periodKey, { ns: 'projects' }) : project.period
 
   return (
     <Sheet open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <SheetContent
         className="overflow-hidden bg-background text-primary"
         aria-describedby={undefined}
+        closeLabel={t('common.close', { defaultValue: 'Close' })}
       >
         <div className="shrink-0 border-b border-border px-5 pb-3 pt-4 pr-14">
           <SheetHeader>
             <SheetTitle className="text-xl text-primary sm:text-2xl">{project.title}</SheetTitle>
             <SheetDescription className="text-xs text-secondary sm:text-sm">
               {project.company ?? project.title}
-              {project.period ? ` · ${project.period}` : ''}
+              {period ? ` · ${period}` : ''}
             </SheetDescription>
           </SheetHeader>
         </div>
@@ -57,8 +59,12 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
         <ScrollArea className="min-h-0 flex-1">
           <ScrollAreaViewport>
             <div className="space-y-8 px-6 py-6">
-              <div className="overflow-hidden rounded-md border border-border bg-surface-muted">
-                <AppImage src={project.cover} alt={project.title} className="h-75 w-full" />
+              <div className="overflow-hidden rounded-none border border-border bg-surface-muted">
+                <AppImage
+                  src={project.cover}
+                  alt={project.title}
+                  className="aspect-[16/10] w-full"
+                />
               </div>
 
               <div className="grid gap-6 md:grid-cols-project-details">
@@ -107,7 +113,7 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
                     <Button
                       asChild
                       variant="outline"
-                      className="group h-auto gap-2 rounded-md bg-surface-interactive px-3 py-2 text-sm text-primary transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:bg-surface-interactive hover:text-accent"
+                      className="group h-auto gap-2 rounded-none bg-surface-interactive px-3 py-2 text-sm text-primary transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:bg-surface-interactive hover:text-accent"
                     >
                       <a href={project.website} target="_blank" rel="noreferrer">
                         {t('project.website', { defaultValue: 'Project website' })}
@@ -118,49 +124,55 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
                 </div>
               </div>
 
-              <div>
-                <div className="mb-4 font-mono text-caption uppercase tracking-editorial text-secondary">
-                  {t('project.gallery', { defaultValue: 'Gallery' })}
-                </div>
-
-                <Carousel opts={{ loop: false }} className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="hidden gap-2 md:flex">
-                        <CarouselPrevious
-                          aria-label={t('project.galleryPrevious', {
-                            defaultValue: 'Previous image',
-                          })}
-                        />
-                        <CarouselNext
-                          aria-label={t('project.galleryNext', { defaultValue: 'Next image' })}
-                        />
-                      </div>
-                      <CarouselIndicators
-                        label={t('project.gallery')}
-                        getSlideLabel={(index) =>
-                          t('project.gallerySlide', {
-                            number: index + 1,
-                            defaultValue: `Slide ${index + 1}`,
-                          })
-                        }
-                      />
-                    </div>
+              {project.gallery.length > 0 && (
+                <div>
+                  <div className="mb-4 font-mono text-caption uppercase tracking-editorial text-secondary">
+                    {t('project.gallery', { defaultValue: 'Gallery' })}
                   </div>
 
-                  <CarouselContent>
-                    {project.gallery.map((image, index) => (
-                      <CarouselItem key={`${project.id}-${index}`}>
-                        <AppImage
-                          src={image}
-                          alt={`${project.title} gallery ${index + 1}`}
-                          className="h-95 w-full md:h-105"
+                  <Carousel opts={{ loop: false }} className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="hidden gap-2 md:flex">
+                          <CarouselPrevious
+                            aria-label={t('project.galleryPrevious', {
+                              defaultValue: 'Previous image',
+                            })}
+                          />
+                          <CarouselNext
+                            aria-label={t('project.galleryNext', { defaultValue: 'Next image' })}
+                          />
+                        </div>
+                        <CarouselIndicators
+                          label={t('project.gallery', { defaultValue: 'Gallery' })}
+                          getSlideLabel={(index) =>
+                            t('project.gallerySlide', {
+                              number: index + 1,
+                              defaultValue: `Slide ${index + 1}`,
+                            })
+                          }
                         />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                </Carousel>
-              </div>
+                      </div>
+                    </div>
+
+                    <CarouselContent>
+                      {project.gallery.map((image, index) => (
+                        <CarouselItem key={`${project.id}-${index}`}>
+                          <AppImage
+                            src={image}
+                            alt={t('project.galleryImageAlt', {
+                              title: project.title,
+                              number: index + 1,
+                              defaultValue: `${project.title} screenshot ${index + 1}`,
+                            })}
+                            className="aspect-[16/10] w-full"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
+                </div>
+              )}
             </div>
           </ScrollAreaViewport>
         </ScrollArea>

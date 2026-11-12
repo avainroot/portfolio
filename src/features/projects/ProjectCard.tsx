@@ -36,12 +36,12 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
       whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
       className="h-full"
     >
-      <Card className="group relative flex h-full flex-col overflow-hidden transition-colors hover:border-accent">
+      <Card className="group relative flex h-full flex-col overflow-hidden">
         <AppImage
           src={project.cover}
           alt={project.title}
-          className="h-80 w-full shrink-0 rounded-none border-b border-border bg-surface-muted"
-          imageClassName="transition-transform duration-500 group-hover:scale-105"
+          className="aspect-[16/10] w-full shrink-0 rounded-none border-b border-border bg-surface-muted"
+          imageClassName="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
         />
 
         <CardHeader className="gap-4">
@@ -75,7 +75,7 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
           variant="ghost"
           onClick={onOpen}
           aria-label={`${t('common.viewProject', { defaultValue: 'View project' })}: ${project.title}`}
-          className="absolute inset-0 z-10 h-full w-full rounded-lg p-0 active:scale-100 hover:bg-transparent focus-visible:ring-inset"
+          className="absolute inset-0 z-10 h-full w-full rounded-none p-0 active:scale-100 hover:bg-transparent focus-visible:ring-inset"
         />
       </Card>
     </motion.article>

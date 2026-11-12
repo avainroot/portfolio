@@ -1,0 +1,66 @@
+{
+  "projectType": "webapp",
+  "setup": [
+    {
+      "command": "pnpm",
+      "args": ["install", "--frozen-lockfile"],
+      "timeoutSeconds": 600
+    }
+  ],
+  "assertions": [
+    {
+      "name": "typecheck",
+      "kind": "process",
+      "command": "pnpm",
+      "args": ["run", "typecheck"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "pnpm",
+      "args": ["run", "test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "lint-source",
+      "kind": "process",
+      "command": "pnpm",
+      "args": ["run", "lint"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "production-build",
+      "kind": "process",
+      "command": "pnpm",
+      "args": ["run", "build"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "home-page-200",
+      "kind": "http-probe",
+      "startCommand": "pnpm",
+      "startArgs": [
+        "exec",
+        "vite",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5178",
+        "--strictPort"
+      ],
+      "url": "http://127.0.0.1:5178/portfolio/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    }
+  ]
+}

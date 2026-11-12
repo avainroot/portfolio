@@ -1,0 +1,235 @@
+{
+  "planHash": "61e6cd92f249442b2807edb10b210b547c210e6c2de4a24cfd703cd1a1245512",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-12T21:01:15.0756547Z",
+  "retryCount": 1,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 201,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "typecheck",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "$ tsc -b --noEmit \u0026\u0026 tsc -p tsconfig.test.json\r\n",
+        "durationMs": 598
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "$ vitest run\r\n\r\n RUN  v5.1.0 D:/RF/project/portfolio\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  2 passed (2)\r\n   Start at  00:01:07\r\n   Duration  184ms (import 48%, transform 25%, worker 16%, tests 11%, environment 1%)\r\n\r\n",
+        "durationMs": 879,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 2,
+          "testsPassed": 2,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "lint-source",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "$ oxlint src scripts tests\r\nsrc/components/ui/button.tsx:45:18: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.\r\nsrc/components/ui/carousel.tsx:213:3: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.\r\n",
+        "durationMs": 220
+      },
+      {
+        "name": "production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "$ pnpm run format \u0026\u0026 node scripts/optimize-images.mjs \u0026\u0026 pnpm run typecheck \u0026\u0026 vite build\r\n$ prettier --write \u0022src/**/*.{ts,tsx,json,css}\u0022 \u0022tests/**/*.ts\u0022 \u0022scripts/**/*.mjs\u0022 \u0022*.{json,ts,html}\u0022 \u0022.prettierrc.json\u0022 \u0022.vscode/**/*.json\u0022\r\n\u001B[90msrc/App.tsx\u001B[39m 52ms (unchanged)\r\n\u001B[90msrc/components/AmbientBackground.tsx\u001B[39m 13ms (unchanged)\r\n\u001B[90msrc/components/AppImage.tsx\u001B[39m 11ms (unchanged)\r\n\u001B[90msrc/components/ui/badge.tsx\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/components/ui/button.tsx\u001B[39m 9ms (unchanged)\r\n\u001B[90msrc/components/ui/card.tsx\u001B[39m 10ms (unchanged)\r\n\u001B[90msrc/components/ui/carousel.tsx\u001B[39m 25ms (unchanged)\r\n\u001B[90msrc/components/ui/scroll-area.tsx\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/components/ui/separator.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/components/ui/sheet.tsx\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/components/ui/skeleton.tsx\u001B[39m 3ms (unchanged)\r\n\u001B[90msrc/content/projects.ts\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/content/site.ts\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/content/types.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/features/about/AboutSection.tsx\u001B[39m 3ms (unchanged)\r\n\u001B[90msrc/features/contact/ContactSection.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/features/navigation/Footer.tsx\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/features/navigation/Header.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectCard.tsx\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectSheet.tsx\u001B[39m 17ms (unchanged)\r\n\u001B[90msrc/i18n/i18n.ts\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/i18n/locales/en/projects.json\u001B[39m 9ms (unchanged)\r\n\u001B[90msrc/i18n/locales/en/site.json\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/i18n/locales/ru/projects.json\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/i18n/locales/ru/site.json\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/index.css\u001B[39m 37ms (unchanged)\r\n\u001B[90msrc/lib/utils.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/main.tsx\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/store/usePortfolioStore.ts\u001B[39m 5ms (unchanged)\r\n\u001B[90mtests/projects.test.ts\u001B[39m 11ms (unchanged)\r\n\u001B[90mscripts/optimize-images.mjs\u001B[39m 11ms (unchanged)\r\n\u001B[90m.oxlintrc.json\u001B[39m 1ms (unchanged)\r\n\u001B[90m.prettierrc.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mindex.html\u001B[39m 17ms (unchanged)\r\n\u001B[90mpackage.json\u001B[39m 2ms (unchanged)\r\n\u001B[90mtsconfig.app.json\u001B[39m 2ms (unchanged)\r\n\u001B[90mtsconfig.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.node.json\u001B[39m 2ms (unchanged)\r\n\u001B[90mtsconfig.test.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mvite.config.ts\u001B[39m 2ms (unchanged)\r\n\u001B[90m.vscode/extensions.json\u001B[39m 0ms (unchanged)\r\n\u001B[90m.vscode/settings.json\u001B[39m 1ms (unchanged)\r\nGenerated public\\images\\harbour-space\\cover.avif\r\nGenerated public\\images\\harbour-space\\detail-1.avif\r\nGenerated public\\images\\seafood-shop\\cover.avif\r\nGenerated public\\images\\seafood-shop\\detail-1.avif\r\n$ tsc -b --noEmit \u0026\u0026 tsc -p tsconfig.test.json\r\n\u001B[36mvite v8.3.8 \u001B[32mbuilding client environment for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\u2713 2628 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndocs/index.html                                                   0.60 kB \u2502 gzip:   0.36 kB\r\ndocs/assets/geist-mono-symbols2-wght-normal-CO5SzqOn.woff2        5.81 kB\r\ndocs/assets/geist-mono-cyrillic-ext-wght-normal-X_5orZeX.woff2    6.17 kB\r\ndocs/assets/geist-mono-vietnamese-wght-normal-DadHysG0.woff2      7.69 kB\r\ndocs/assets/onest-cyrillic-ext-wght-normal-DOFToQv1.woff2        10.54 kB\r\ndocs/assets/onest-vietnamese-wght-normal-BBxOatbv.woff2          12.40 kB\r\ndocs/assets/geist-mono-cyrillic-wght-normal-DiZS0aHC.woff2       12.94 kB\r\ndocs/assets/geist-mono-latin-ext-wght-normal-Bwz-egvJ.woff2      14.69 kB\r\ndocs/assets/onest-cyrillic-wght-normal-DayYxulF.woff2            15.86 kB\r\ndocs/assets/onest-symbols-wght-normal-DxQzqQfC.woff2             18.16 kB\r\ndocs/assets/geist-mono-latin-wght-normal-XN7g48iV.woff2          23.12 kB\r\ndocs/assets/onest-math-wght-normal-Bl4ZGkZl.woff2                25.48 kB\r\ndocs/assets/onest-latin-ext-wght-normal-QAhDxQuo.woff2           28.45 kB\r\ndocs/assets/onest-latin-wght-normal-Dun_Rd-l.woff2               33.76 kB\r\ndocs/assets/index-CvQcak-5.css                                   46.40 kB \u2502 gzip:   9.45 kB\r\ndocs/assets/index-CE6fpNUu.js                                   548.32 kB\n\u2026[truncated]",
+        "durationMs": 5802
+      },
+      {
+        "name": "home-page-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022ru\u0022\u003E\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/portfolio/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/portfolio/@vite/client\u0022\u003E\u003C/script\u003E\n\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\n    \u003Cmeta\n      name=\u0022description\u0022\n      content=\u0022Portfolio of a frontend developer focused on React, TypeScript, product interfaces, and shipping clear digital experiences.\u0022\n    /\u003E\n    \u003Ctitle\u003EPortfolio | AV.\u003C/title\u003E\n  \u003C/head\u003E\n  \u003Cbody\u003E\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\n    \u003Cscript type=\u0022module\u0022 src=\u0022/portfolio/src/main.tsx\u0022\u003E\u003C/script\u003E\n  \u003C/body\u003E\n\u003C/html\u003E\n\n--- server output ---\n\u001B[2m00:01:14\u001B[22m \u001B[36m\u001B[1m[vite]\u001B[22m\u001B[39m \u001B[90m\u001B[2m(client)\u001B[22m\u001B[39m Re-optimizing dependencies because lockfile has changed\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v8.3.8\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m399\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m5178\u001B[22m/portfolio/\u001B[39m\r\n",
+        "durationMs": 1042
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "args": [
+          "install",
+          "--frozen-lockfile"
+        ],
+        "cwd": "D:\\RF\\project\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v22.14.0",
+        "packageManager": "pnpm",
+        "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "packageManagerVersion": "12.18.0",
+        "cleanup": {
+          "RootProcessId": 7792,
+          "Completed": true,
+          "ProcessesObserved": 7,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "typecheck",
+        "resolvedExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "args": [
+          "run",
+          "typecheck"
+        ],
+        "cwd": "D:\\RF\\project\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v22.14.0",
+        "packageManager": "pnpm",
+        "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "packageManagerVersion": "12.18.0",
+        "cleanup": {
+          "RootProcessId": 11616,
+          "Completed": true,
+          "ProcessesObserved": 11,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "args": [
+          "run",
+          "test"
+        ],
+        "cwd": "D:\\RF\\project\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v22.14.0",
+        "packageManager": "pnpm",
+        "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "packageManagerVersion": "12.18.0",
+        "cleanup": {
+          "RootProcessId": 23764,
+          "Completed": true,
+          "ProcessesObserved": 9,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "lint-source",
+        "resolvedExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "args": [
+          "run",
+          "lint"
+        ],
+        "cwd": "D:\\RF\\project\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v22.14.0",
+        "packageManager": "pnpm",
+        "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "packageManagerVersion": "12.18.0",
+        "cleanup": {
+          "RootProcessId": 23992,
+          "Completed": true,
+          "ProcessesObserved": 8,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "production-build",
+        "resolvedExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "D:\\RF\\project\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v22.14.0",
+        "packageManager": "pnpm",
+        "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "packageManagerVersion": "12.18.0",
+        "cleanup": {
+          "RootProcessId": 24984,
+          "Completed": true,
+          "ProcessesObserved": 26,
+          "ProcessesTerminated": 1,
+          "Failure": null
+        }
+      },
+      {
+        "source": "home-page-200",
+        "resolvedExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "args": [
+          "exec",
+          "vite",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "5178",
+          "--strictPort"
+        ],
+        "cwd": "D:\\RF\\project\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32",
+        "nodeExecutable": "C:\\Program Files\\nodejs\\node.EXE",
+        "nodeVersion": "v22.14.0",
+        "packageManager": "pnpm",
+        "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
+        "packageManagerVersion": "12.18.0",
+        "cleanup": {
+          "RootProcessId": 25152,
+          "Completed": true,
+          "ProcessesObserved": 8,
+          "ProcessesTerminated": 7,
+          "Failure": null
+        }
+      }
+    ]
+  }
+}

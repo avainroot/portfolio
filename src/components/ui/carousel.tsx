@@ -122,7 +122,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
         variant="outline"
         size="icon"
         className={cn(
-          'rounded-full bg-surface text-primary hover:border-accent hover:bg-surface-elevated hover:text-accent disabled:cursor-not-allowed disabled:opacity-40',
+          'rounded-none bg-surface text-primary hover:border-accent hover:bg-surface-elevated hover:text-accent disabled:cursor-not-allowed disabled:opacity-40',
           className,
         )}
         onClick={scrollPrev}
@@ -147,7 +147,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<'b
         variant="outline"
         size="icon"
         className={cn(
-          'rounded-full bg-surface text-primary hover:border-accent hover:bg-surface-elevated hover:text-accent disabled:cursor-not-allowed disabled:opacity-40',
+          'rounded-none bg-surface text-primary hover:border-accent hover:bg-surface-elevated hover:text-accent disabled:cursor-not-allowed disabled:opacity-40',
           className,
         )}
         onClick={scrollNext}
@@ -188,12 +188,12 @@ function CarouselIndicators({
           aria-label={getSlideLabel(index)}
           aria-pressed={selectedIndex === index}
           onClick={() => api?.scrollTo(index)}
-          className="h-6 w-6 rounded-full p-0 hover:bg-transparent"
+          className="h-6 w-6 rounded-none p-0 hover:bg-transparent"
         >
           <span
             aria-hidden="true"
             className={cn(
-              'h-1.5 w-1.5 rounded-full transition-colors',
+              'h-1.5 w-1.5 rounded-none transition-colors',
               selectedIndex === index ? 'bg-accent' : 'bg-secondary/50',
             )}
           />

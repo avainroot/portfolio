@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <AmbientBackground />
-      <div className="relative z-10 min-h-screen bg-background text-primary">
+      <div className="relative z-10 min-h-screen bg-background/85 text-primary">
         <Header
           language={language}
           onToggleLanguage={() => setLanguage(language === 'ru' ? 'en' : 'ru')}
@@ -37,7 +37,7 @@ function App() {
             </div>
             <Separator className="mb-8" />
 
-            <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
               {projects.map((project, index) => (
                 <ProjectCard
                   key={project.id}

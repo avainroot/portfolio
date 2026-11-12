@@ -9,7 +9,7 @@
     },
     "about": {
       "title": "About",
-      "body": "I design interfaces and product experiences where architecture clarity, careful data handling, and user comfort all matter. I can manage screen state, maintain a consistent design system, and bring interactive flows to a polished, dependable result."
+      "body": "Frontend developer focused on React, TypeScript, and Next.js. I pay attention to clear interface structure, straightforward user flows, and careful API integration."
     },
     "contact": {
       "title": "Contact",
@@ -27,12 +27,14 @@
       "gallery": "Gallery",
       "galleryPrevious": "Previous image",
       "galleryNext": "Next image",
-      "gallerySlide": "Slide {{number}}"
+      "gallerySlide": "Slide {{number}}",
+      "galleryImageAlt": "{{title}} screenshot {{number}}"
     },
     "common": {
       "viewProject": "View project",
       "languageSwitch": "RU",
-      "close": "Close"
+      "close": "Close",
+      "imageUnavailable": "Image unavailable"
     }
   }
 }

@@ -6,15 +6,18 @@
   "packageManager": "pnpm@12.18.0",
   "scripts": {
     "dev": "vite --host",
-    "typecheck": "tsc -b --noEmit",
-    "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\" \"scripts/**/*.mjs\" \"*.{json,ts,html}\" \".prettierrc.json\" \".vscode/**/*.json\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,json,css}\" \"scripts/**/*.mjs\" \"*.{json,ts,html}\" \".prettierrc.json\" \".vscode/**/*.json\"",
-    "build": "pnpm run format && node scripts/optimize-images.mjs && tsc -b --noEmit && vite build",
+    "typecheck": "tsc -b --noEmit && tsc -p tsconfig.test.json",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\" \"tests/**/*.ts\" \"scripts/**/*.mjs\" \"*.{json,ts,html}\" \".prettierrc.json\" \".vscode/**/*.json\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,json,css}\" \"tests/**/*.ts\" \"scripts/**/*.mjs\" \"*.{json,ts,html}\" \".prettierrc.json\" \".vscode/**/*.json\"",
+    "build": "pnpm run format && node scripts/optimize-images.mjs && pnpm run typecheck && vite build",
+    "test": "vitest run",
     "preview": "vite preview --host",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "lint": "oxlint ."
+    "lint": "oxlint src scripts tests"
   },
   "dependencies": {
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@fontsource-variable/onest": "^5.3.1",
     "@radix-ui/react-dialog": "^1.3.1",
     "@radix-ui/react-scroll-area": "^1.4.0",
     "@radix-ui/react-separator": "^1.2.0",
@@ -42,6 +45,7 @@
     "prettier": "^3.10.0",
     "tailwindcss": "^4.3.5",
     "typescript": "~7.0.2",
-    "vite": "^8.3.6"
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
   }
 }

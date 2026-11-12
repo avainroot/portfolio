@@ -4,6 +4,7 @@ export interface Project {
   title: string
   company?: string
   period?: string
+  periodKey?: string
   roleKey: string
   shortDescriptionKey: string
   descriptionKey: string

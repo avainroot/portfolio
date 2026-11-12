@@ -17,6 +17,10 @@ const selectedLanguage = supportedLanguages.includes(
   ? (browserLanguage as (typeof supportedLanguages)[number])
   : fallbackLanguage
 
+if (typeof document !== 'undefined') {
+  document.documentElement.lang = selectedLanguage
+}
+
 const resources = {
   ru: {
     projects: ruProjects.projects,
@@ -37,6 +41,12 @@ void i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
+})
+
+i18n.on('languageChanged', (language) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = language.toLowerCase().startsWith('ru') ? 'ru' : 'en'
+  }
 })
 
 export const setLanguage = (language: 'ru' | 'en') => {
