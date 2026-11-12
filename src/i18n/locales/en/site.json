@@ -1,0 +1,38 @@
+{
+  "site": {
+    "header": {
+      "logo": "AV.",
+      "role": "Frontend developer",
+      "stack": "React, TypeScript, Next.js",
+      "language": "EN",
+      "projects": "Projects"
+    },
+    "about": {
+      "title": "About",
+      "body": "I design interfaces and product experiences where architecture clarity, careful data handling, and user comfort all matter. I can manage screen state, maintain a consistent design system, and bring interactive flows to a polished, dependable result."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "For projects, product work, and collaboration inquiries."
+    },
+    "footer": "Portfolio",
+    "project": {
+      "role": "Role",
+      "description": "Description",
+      "contribution": "Contribution",
+      "technologies": "Technologies",
+      "website": "Project website",
+      "previous": "Previous",
+      "next": "Next",
+      "gallery": "Gallery",
+      "galleryPrevious": "Previous image",
+      "galleryNext": "Next image",
+      "gallerySlide": "Slide {{number}}"
+    },
+    "common": {
+      "viewProject": "View project",
+      "languageSwitch": "RU",
+      "close": "Close"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "projects": {
+    "nsign": {
+      "role": "Frontend Developer",
+      "shortDescription": "A document verification and signing ecosystem for business workflows.",
+      "description": "I developed interface screens for Nsign: a centralized workspace for document approval, form management, and subscription flows. The focus was on clear user journeys, resilient screen states, and working efficiently with large data sets.",
+      "contribution": "Built the approval-module interface, improved status navigation and document flow clarity, and aligned the screens around a consistent product language. I worked closely with designers and analysts to speed up release cycles and reduce validation issues."
+    },
+    "harbour-space": {
+      "role": "Frontend Developer",
+      "shortDescription": "A learning platform for programs, events, and academic discovery.",
+      "description": "I contributed to Harbour Space’s product experience: program pages, event catalogs, participation flows, and responsive layouts across device sizes. The key challenge was balancing dense information with straightforward and focused user journeys.",
+      "contribution": "Updated the structure of program pages, refined navigation between courses and events, and improved presentation quality across breakpoints. I consolidated common UI patterns and reduced duplicated logic across the product."
+    },
+    "seafood-shop": {
+      "role": "Frontend Developer",
+      "shortDescription": "An online seafood storefront with catalog, cart, and checkout flows.",
+      "description": "I worked on the seafood shop storefront: product catalog, product details, cart state, and checkout UX. The focus was to keep the shopping experience fast, legible, and lightweight without overwhelming users with visual clutter.",
+      "contribution": "Designed and implemented the catalog and cart experience, stabilised responsive layouts, and refined UI states to make ordering more comfortable and understandable on different screen sizes."
+    },
+    "interlabs": {
+      "role": "Frontend Developer",
+      "shortDescription": "A platform for internal data workflows and team analytics panels.",
+      "description": "I contributed to the Interlabs product experience for operational and analytical workflows: dashboard states, filters, and working sets of data. The challenge was making complex information readable without sacrificing clarity or speed.",
+      "contribution": "Unified common interface patterns into a cleaner component system, improved filter behaviour and loading states, and reduced maintenance cost across the product while accelerating future feature delivery."
+    }
+  }
+}

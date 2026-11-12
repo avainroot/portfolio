@@ -1,0 +1,28 @@
+<svg width="1280" height="900" viewBox="0 0 1280 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="900" fill="#0f172a"/>
+  <rect x="120" y="90" width="1040" height="720" rx="24" fill="#111827" stroke="#1c8cff" stroke-opacity="0.35"/>
+  <rect x="170" y="148" width="240" height="20" rx="10" fill="#dfeafc" fill-opacity="0.8"/>
+  <rect x="170" y="186" width="190" height="12" rx="6" fill="#dfeafc" fill-opacity="0.28"/>
+  <rect x="170" y="246" width="332" height="240" rx="20" fill="#1c8cff" fill-opacity="0.18"/>
+  <rect x="532" y="246" width="578" height="54" rx="14" fill="#1B2430"/>
+  <rect x="532" y="326" width="578" height="160" rx="18" fill="#1B2430"/>
+  <rect x="532" y="510" width="270" height="160" rx="18" fill="#1B2430"/>
+  <rect x="840" y="510" width="270" height="160" rx="18" fill="#1B2430"/>
+  <rect x="170" y="520" width="332" height="186" rx="20" fill="#0F172A" stroke="#1c8cff" stroke-opacity="0.2"/>
+  <rect x="200" y="550" width="120" height="11" rx="5.5" fill="#dfeafc" fill-opacity="0.66"/>
+  <rect x="200" y="576" width="170" height="10" rx="5" fill="#dfeafc" fill-opacity="0.3"/>
+  <rect x="200" y="603" width="220" height="10" rx="5" fill="#dfeafc" fill-opacity="0.22"/>
+  <rect x="200" y="633" width="190" height="10" rx="5" fill="#dfeafc" fill-opacity="0.22"/>
+  <rect x="602" y="274" width="140" height="16" rx="8" fill="#dfeafc" fill-opacity="0.72"/>
+  <circle cx="872" cy="273" r="22" fill="#1c8cff" fill-opacity="0.24"/>
+  <circle cx="912" cy="273" r="22" fill="#1c8cff" fill-opacity="0.18"/>
+  <circle cx="952" cy="273" r="22" fill="#1c8cff" fill-opacity="0.14"/>
+  <rect x="582" y="356" width="220" height="16" rx="8" fill="#dfeafc" fill-opacity="0.75"/>
+  <rect x="582" y="394" width="390" height="11" rx="5.5" fill="#dfeafc" fill-opacity="0.22"/>
+  <rect x="582" y="418" width="340" height="11" rx="5.5" fill="#dfeafc" fill-opacity="0.18"/>
+  <rect x="582" y="442" width="260" height="11" rx="5.5" fill="#dfeafc" fill-opacity="0.16"/>
+  <rect x="568" y="540" width="180" height="16" rx="8" fill="#dfeafc" fill-opacity="0.7"/>
+  <rect x="876" y="540" width="180" height="16" rx="8" fill="#dfeafc" fill-opacity="0.7"/>
+  <text x="170" y="82" fill="#dfeafc" font-family="Arial, sans-serif" font-size="30" font-weight="700">Overview</text>
+  <text x="170" y="764" fill="#1c8cff" font-family="Arial, sans-serif" font-size="64" font-weight="700">Nsign</text>
+</svg>
