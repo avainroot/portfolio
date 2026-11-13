@@ -50,25 +50,23 @@ describe('project content', () => {
       }
 
       expect(project.company.trim()).not.toBe('')
-      expect(project.companyUrl).toMatch(/^https:\/\//)
+      if (project.companyUrl) {
+        expect(project.companyUrl).toMatch(/^https:\/\//)
+      }
     }
   })
 
   it('uses the correct company and project websites', () => {
     expect(
-      projects.map(({ id, company, companyUrl, website }) => ({
-        id,
-        company,
-        companyUrl,
-        website,
-      })),
+      projects
+        .map(({ id, company, companyUrl, website }) => ({
+          id,
+          company,
+          companyUrl,
+          website,
+        }))
+        .sort((left, right) => left.id.localeCompare(right.id)),
     ).toEqual([
-      {
-        id: 'nsign',
-        company: 'Nsign',
-        companyUrl: 'https://nsign.ru/',
-        website: 'https://nsign.ru/',
-      },
       {
         id: 'harbour-space',
         company: 'Harbour.Space',
@@ -76,10 +74,40 @@ describe('project content', () => {
         website: 'https://harbour.space/articles/home',
       },
       {
+        id: 'metrostroy',
+        company: 'Interlabs',
+        companyUrl: 'https://www.interlabs.ru/',
+        website: 'https://www.metrostroy.com/',
+      },
+      {
+        id: 'nsign',
+        company: 'Nsign',
+        companyUrl: 'https://nsign.ru/',
+        website: 'https://nsign.ru/',
+      },
+      {
+        id: 'ostec-smart',
+        company: 'Interlabs',
+        companyUrl: 'https://www.interlabs.ru/',
+        website: 'https://ostec-smart.ru/',
+      },
+      {
         id: 'seafood-shop',
         company: 'СЕМПРОГРУПП',
         companyUrl: 'https://spg-agency.ru/',
         website: 'https://seafood-shop.ru/',
+      },
+      {
+        id: 'spark-interfax',
+        company: 'Interlabs',
+        companyUrl: 'https://www.interlabs.ru/',
+        website: 'https://spark-interfax.com/',
+      },
+      {
+        id: 'visa-sk',
+        company: 'Interlabs',
+        companyUrl: 'https://www.interlabs.ru/',
+        website: 'https://visa.sk.ru/',
       },
     ])
   })

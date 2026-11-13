@@ -14,6 +14,26 @@
       "shortDescription": "Frontend development of an e-commerce website from scratch using Next.js and React, integrated with 1C-Bitrix through a REST API.",
       "description": "An online seafood store featuring a product catalog, shopping cart, and checkout. The frontend is built with Next.js and React, with store data and operations integrated with 1C-Bitrix through a REST API.",
       "contribution": "Developed the store frontend from scratch, implementing the product catalog, shopping cart, and checkout flow. Built reusable components and integrated the interface with the 1C-Bitrix API. Used SSR and React Server Components."
+    },
+    "visa-sk": {
+      "shortDescription": "Frontend development of the Skolkovo Foundation's immigration support service website using 1C-Bitrix.",
+      "description": "A website for a service providing immigration and visa support to foreign professionals. It features a service catalog with descriptions and pricing, application forms, a personal account for managing requests, and an interactive map of service regions. The website is available in Russian and English.",
+      "contribution": "Developed the website frontend using HTML, CSS, and JavaScript. Implemented responsive page layouts, personal account interfaces, and application forms, along with interactive elements and animations. Integrated the frontend into 1C-Bitrix using CMS templates and components."
+    },
+    "metrostroy": {
+      "shortDescription": "Frontend development of the corporate website for Mosmetrostroy using 1C-Bitrix.",
+      "description": "A corporate website for a multidisciplinary construction company, showcasing its key business areas: metro construction, civil and road transport infrastructure, transport facility reconstruction, and engineering design. The website presents the company's projects, history, and achievements, with Russian and English language versions.",
+      "contribution": "Developed the website frontend using HTML, CSS, and JavaScript. Implemented responsive layouts for the homepage and internal pages, section interfaces, and interactive elements. Integrated the frontend into 1C-Bitrix using CMS templates and components."
+    },
+    "ostec-smart": {
+      "shortDescription": "Corporate website for a supplier of electronics manufacturing equipment, industrial 3D printing, and non-destructive testing solutions.",
+      "description": "The website brings together two business areas under one domain. It features solution and equipment catalogs, product pages with technical specifications, and downloadable materials. Its structure and visual design present the company's business areas as a unified platform while maintaining a distinct identity for each.",
+      "contribution": "Developed the website frontend using 1C-Bitrix, implementing responsive layouts and integrating the interface into the CMS through templates and components. Built interactive elements and animations, and worked on equipment catalogs and product pages to ensure consistent content presentation across devices."
+    },
+    "spark-interfax": {
+      "shortDescription": "Frontend development of the SPARK business intelligence platform website by Interfax.",
+      "description": "The SPARK website presents a business intelligence platform for counterparty verification and business risk analysis. It showcases the platform's analytical capabilities, risk assessment tools, and product information, and provides forms for contacting the company.",
+      "contribution": "Developed the SPARK website frontend, implementing responsive layouts based on design mockups, UI elements, and forms. Integrated the frontend into 1C-Bitrix using CMS templates and components."
     }
   }
 }

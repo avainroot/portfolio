@@ -2,7 +2,20 @@ import type { Project } from '@/content/types'
 
 const base = import.meta.env.BASE_URL
 
-export const projects: Project[] = [
+function shuffleProjects<T>(items: readonly T[]): T[] {
+  const shuffled = [...items]
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1))
+    const currentItem = shuffled[index]
+    shuffled[index] = shuffled[randomIndex]
+    shuffled[randomIndex] = currentItem
+  }
+
+  return shuffled
+}
+
+const projectData: Project[] = [
   {
     id: 'nsign',
     title: 'Nsign',
@@ -72,4 +85,86 @@ export const projects: Project[] = [
       `${base}images/seafood-shop/detail-3.avif`,
     ],
   },
+  {
+    id: 'visa-sk',
+    title: 'Центр по миграционной поддержке',
+    company: 'Interlabs',
+    companyUrl: 'https://www.interlabs.ru/',
+    shortDescriptionKey: 'visa-sk.shortDescription',
+    descriptionKey: 'visa-sk.description',
+    contributionKey: 'visa-sk.contribution',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery', '1С-Битрикс', 'Адаптивная вёрстка'],
+    website: 'https://visa.sk.ru/',
+    cover: `${base}images/visa-sk/cover.avif`,
+    gallery: [
+      `${base}images/visa-sk/cover.avif`,
+      `${base}images/visa-sk/detail-1.avif`,
+      `${base}images/visa-sk/detail-2.avif`,
+      `${base}images/visa-sk/detail-3.avif`,
+    ],
+  },
+  {
+    id: 'metrostroy',
+    title: 'Мосметрострой',
+    company: 'Interlabs',
+    companyUrl: 'https://www.interlabs.ru/',
+    shortDescriptionKey: 'metrostroy.shortDescription',
+    descriptionKey: 'metrostroy.description',
+    contributionKey: 'metrostroy.contribution',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery', '1С-Битрикс', 'Адаптивная вёрстка'],
+    website: 'https://www.metrostroy.com/',
+    cover: `${base}images/metrostroy/cover.avif`,
+    gallery: [
+      `${base}images/metrostroy/cover.avif`,
+      `${base}images/metrostroy/detail-1.avif`,
+      `${base}images/metrostroy/detail-2.avif`,
+      `${base}images/metrostroy/detail-3.avif`,
+    ],
+  },
+  {
+    id: 'ostec-smart',
+    title: 'Остек-СМТ',
+    company: 'Interlabs',
+    companyUrl: 'https://www.interlabs.ru/',
+    shortDescriptionKey: 'ostec-smart.shortDescription',
+    descriptionKey: 'ostec-smart.description',
+    contributionKey: 'ostec-smart.contribution',
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'jQuery',
+      '1С-Битрикс',
+      'Адаптивная вёрстка',
+      'CSS3-анимации',
+    ],
+    website: 'https://ostec-smart.ru/',
+    cover: `${base}images/ostec-smart/cover.avif`,
+    gallery: [
+      `${base}images/ostec-smart/cover.avif`,
+      `${base}images/ostec-smart/detail-1.avif`,
+      `${base}images/ostec-smart/detail-2.avif`,
+      `${base}images/ostec-smart/detail-3.avif`,
+    ],
+  },
+  {
+    id: 'spark-interfax',
+    title: 'SPARK',
+    company: 'Interlabs',
+    companyUrl: 'https://www.interlabs.ru/',
+    shortDescriptionKey: 'spark-interfax.shortDescription',
+    descriptionKey: 'spark-interfax.description',
+    contributionKey: 'spark-interfax.contribution',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery', '1С-Битрикс', 'Адаптивная вёрстка'],
+    website: 'https://spark-interfax.com/',
+    cover: `${base}images/spark-interfax/cover.avif`,
+    gallery: [
+      `${base}images/spark-interfax/cover.avif`,
+      `${base}images/spark-interfax/detail-1.avif`,
+      `${base}images/spark-interfax/detail-2.avif`,
+      `${base}images/spark-interfax/detail-3.avif`,
+    ],
+  },
 ]
+
+export const projects = shuffleProjects(projectData)

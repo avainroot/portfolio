@@ -1,13 +1,13 @@
 {
   "planHash": "61e6cd92f249442b2807edb10b210b547c210e6c2de4a24cfd703cd1a1245512",
   "phase": "standalone",
-  "recordedAtUtc": "2026-11-13T12:28:52.0380827Z",
+  "recordedAtUtc": "2026-11-13T22:18:59.5994149Z",
   "retryCount": 0,
   "resetBaseline": false,
   "complete": true,
   "result": {
     "setupSucceeded": true,
-    "setupDurationMs": 169,
+    "setupDurationMs": 210,
     "setupFailureOutput": null,
     "assertions": [
       {
@@ -20,7 +20,7 @@
         "skippedReason": null,
         "exitCode": 0,
         "outputSample": "$ tsc -b --noEmit \u0026\u0026 tsc -p tsconfig.test.json\r\n",
-        "durationMs": 515
+        "durationMs": 491
       },
       {
         "name": "tests-pass",
@@ -31,8 +31,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": 0,
-        "outputSample": "$ vitest run\r\n\r\n RUN  v5.1.0 D:/RF/project/portfolio\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  3 passed (3)\r\n   Start at  15:28:40\r\n   Duration  237ms (import 45%, transform 44%, tests 6%, worker 5%)\r\n\r\n",
-        "durationMs": 952,
+        "outputSample": "$ vitest run\r\n\r\n RUN  v5.1.0 D:/RF/project/portfolio\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  3 passed (3)\r\n   Start at  01:18:38\r\n   Duration  236ms (transform 42%, import 39%, tests 14%, worker 5%)\r\n\r\n",
+        "durationMs": 850,
         "testResults": {
           "testFramework": "vitest",
           "runnerDetectedFrom": "package_json",
@@ -53,7 +53,7 @@
         "skippedReason": null,
         "exitCode": 0,
         "outputSample": "$ oxlint src scripts tests\r\nsrc/components/ui/button.tsx:45:18: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.\r\nsrc/components/ui/carousel.tsx:213:3: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.\r\n",
-        "durationMs": 205
+        "durationMs": 199
       },
       {
         "name": "production-build",
@@ -64,8 +64,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": 0,
-        "outputSample": "$ pnpm run format \u0026\u0026 node scripts/optimize-images.mjs \u0026\u0026 pnpm run typecheck \u0026\u0026 vite build\r\n$ prettier --write \u0022src/**/*.{ts,tsx,json,css}\u0022 \u0022tests/**/*.ts\u0022 \u0022scripts/**/*.mjs\u0022 \u0022*.{json,ts,html}\u0022 \u0022.prettierrc.json\u0022 \u0022.vscode/**/*.json\u0022\r\n\u001B[90msrc/App.tsx\u001B[39m 54ms (unchanged)\r\n\u001B[90msrc/components/AmbientBackground.tsx\u001B[39m 9ms (unchanged)\r\n\u001B[90msrc/components/AppImage.tsx\u001B[39m 10ms (unchanged)\r\n\u001B[90msrc/components/ui/badge.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/components/ui/button.tsx\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/components/ui/card.tsx\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/components/ui/carousel.tsx\u001B[39m 21ms (unchanged)\r\n\u001B[90msrc/components/ui/scroll-area.tsx\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/components/ui/separator.tsx\u001B[39m 3ms (unchanged)\r\n\u001B[90msrc/components/ui/sheet.tsx\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/components/ui/skeleton.tsx\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/content/projects.ts\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/content/site.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/content/types.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/features/about/AboutSection.tsx\u001B[39m 3ms (unchanged)\r\n\u001B[90msrc/features/contact/ContactSection.tsx\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/features/navigation/Footer.tsx\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/features/navigation/Header.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectCard.tsx\u001B[39m 10ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectGallery.tsx\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectSheet.tsx\u001B[39m 14ms (unchanged)\r\n\u001B[90msrc/i18n/i18n.ts\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/i18n/locales/en/projects.json\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/i18n/locales/en/site.json\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/i18n/locales/ru/projects.json\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/i18n/locales/ru/site.json\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/index.css\u001B[39m 31ms (unchanged)\r\n\u001B[90msrc/lib/utils.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/main.tsx\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/store/usePortfolioStore.ts\u001B[39m 4ms (unchanged)\r\ntests/projects.test.ts 9ms\r\n\u001B[90mscripts/optimize-images.mjs\u001B[39m 12ms (unchanged)\r\n\u001B[90m.oxlintrc.json\u001B[39m 1ms (unchanged)\r\n\u001B[90m.prettierrc.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mindex.html\u001B[39m 16ms (unchanged)\r\n\u001B[90mpackage.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.app.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.node.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.test.json\u001B[39m 0ms (unchanged)\r\n\u001B[90mvite.config.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90m.vscode/extensions.json\u001B[39m 0ms (unchanged)\r\n\u001B[90m.vscode/settings.json\u001B[39m 1ms (unchanged)\r\nGenerated public\\images\\harbour-space\\cover.avif\r\nGenerated public\\images\\harbour-space\\detail-1.avif\r\nGenerated public\\images\\harbour-space\\detail-2.avif\r\nGenerated public\\images\\harbour-space\\detail-3.avif\r\nGenerated public\\images\\nsign\\cover.avif\r\nGenerated public\\images\\nsign\\detail-1.avif\r\nGenerated public\\images\\nsign\\detail-2.avif\r\nGenerated public\\images\\nsign\\detail-3.avif\r\nGenerated public\\images\\seafood-shop\\cover.avif\r\nGenerated public\\images\\seafood-shop\\detail-1.avif\r\nGenerated public\\images\\seafood-shop\\detail-2.avif\r\nGenerated public\\images\\seafood-shop\\detail-3.avif\r\n$ tsc -b --noEmit \u0026\u0026 tsc -p tsconfig.test.json\r\n\u001B[36mvite v8.3.8 \u001B[32mbuilding client environment for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\u2713 2630 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndocs/index.html                                                   0.83 kB \u2502 gzip:   0.48 kB\r\ndocs/assets/geist-mono-symbols2-wght-normal-CO5SzqOn.woff2        5.81 kB\r\ndocs/assets/geist-mono-cyrillic-ext-wght-normal-X_5orZeX.woff2    6.17 kB\r\ndocs/assets/geist-mono-vietnamese-wght-normal-DadHysG0.woff2      7.69 kB\r\ndocs/assets/onest-cyrillic-ext-wght-normal-DOFToQv1.woff2        10.54 kB\r\ndocs/assets/onest-vietnamese-wght-normal-BBxOatbv.woff2          12.40 kB\r\ndocs/assets/geist-mono-cyrillic-wght-normal-DiZS0aHC.woff2       12.94 kB\r\ndocs/assets/geist-mono-latin-ext-wght-normal-Bwz-egvJ.woff2      14.69 kB\r\ndocs/assets/onest-cyrillic-wght-normal-DayYxulF.woff2            15.86 kB\r\ndocs/assets/onest-symbols-wght-normal-DxQzqQfC.woff2             18.16 kB\r\ndocs/assets/geist-mono-latin-wght-n\n\u2026[truncated]",
-        "durationMs": 10292
+        "outputSample": "$ pnpm run format \u0026\u0026 node scripts/optimize-images.mjs \u0026\u0026 pnpm run typecheck \u0026\u0026 vite build\r\n$ prettier --write \u0022src/**/*.{ts,tsx,json,css}\u0022 \u0022tests/**/*.ts\u0022 \u0022scripts/**/*.mjs\u0022 \u0022*.{json,ts,html}\u0022 \u0022.prettierrc.json\u0022 \u0022.vscode/**/*.json\u0022\r\n\u001B[90msrc/App.tsx\u001B[39m 53ms (unchanged)\r\n\u001B[90msrc/components/AmbientBackground.tsx\u001B[39m 18ms (unchanged)\r\n\u001B[90msrc/components/AppImage.tsx\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/components/ui/badge.tsx\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/components/ui/button.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/components/ui/card.tsx\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/components/ui/carousel.tsx\u001B[39m 21ms (unchanged)\r\n\u001B[90msrc/components/ui/scroll-area.tsx\u001B[39m 5ms (unchanged)\r\n\u001B[90msrc/components/ui/separator.tsx\u001B[39m 3ms (unchanged)\r\n\u001B[90msrc/components/ui/sheet.tsx\u001B[39m 7ms (unchanged)\r\n\u001B[90msrc/components/ui/skeleton.tsx\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/content/projects.ts\u001B[39m 13ms (unchanged)\r\n\u001B[90msrc/content/site.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/content/types.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/features/about/AboutSection.tsx\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/features/contact/ContactSection.tsx\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/features/navigation/Footer.tsx\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/features/navigation/Header.tsx\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectCard.tsx\u001B[39m 6ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectGallery.tsx\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/features/projects/ProjectSheet.tsx\u001B[39m 13ms (unchanged)\r\n\u001B[90msrc/i18n/i18n.ts\u001B[39m 4ms (unchanged)\r\n\u001B[90msrc/i18n/locales/en/projects.json\u001B[39m 8ms (unchanged)\r\n\u001B[90msrc/i18n/locales/en/site.json\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/i18n/locales/ru/projects.json\u001B[39m 2ms (unchanged)\r\n\u001B[90msrc/i18n/locales/ru/site.json\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/index.css\u001B[39m 28ms (unchanged)\r\n\u001B[90msrc/lib/utils.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/main.tsx\u001B[39m 1ms (unchanged)\r\n\u001B[90msrc/store/usePortfolioStore.ts\u001B[39m 3ms (unchanged)\r\ntests/projects.test.ts 9ms\r\n\u001B[90mscripts/optimize-images.mjs\u001B[39m 13ms (unchanged)\r\n\u001B[90m.oxlintrc.json\u001B[39m 1ms (unchanged)\r\n\u001B[90m.prettierrc.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mindex.html\u001B[39m 19ms (unchanged)\r\n\u001B[90mpackage.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.app.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.node.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mtsconfig.test.json\u001B[39m 1ms (unchanged)\r\n\u001B[90mvite.config.ts\u001B[39m 1ms (unchanged)\r\n\u001B[90m.vscode/extensions.json\u001B[39m 1ms (unchanged)\r\n\u001B[90m.vscode/settings.json\u001B[39m 1ms (unchanged)\r\nGenerated public\\images\\harbour-space\\cover.avif\r\nGenerated public\\images\\harbour-space\\detail-1.avif\r\nGenerated public\\images\\harbour-space\\detail-2.avif\r\nGenerated public\\images\\harbour-space\\detail-3.avif\r\nGenerated public\\images\\metrostroy\\cover.avif\r\nGenerated public\\images\\metrostroy\\detail-1.avif\r\nGenerated public\\images\\metrostroy\\detail-2.avif\r\nGenerated public\\images\\metrostroy\\detail-3.avif\r\nGenerated public\\images\\nsign\\cover.avif\r\nGenerated public\\images\\nsign\\detail-1.avif\r\nGenerated public\\images\\nsign\\detail-2.avif\r\nGenerated public\\images\\nsign\\detail-3.avif\r\nGenerated public\\images\\ostec-smart\\cover.avif\r\nGenerated public\\images\\ostec-smart\\detail-1.avif\r\nGenerated public\\images\\ostec-smart\\detail-2.avif\r\nGenerated public\\images\\ostec-smart\\detail-3.avif\r\nGenerated public\\images\\seafood-shop\\cover.avif\r\nGenerated public\\images\\seafood-shop\\detail-1.avif\r\nGenerated public\\images\\seafood-shop\\detail-2.avif\r\nGenerated public\\images\\seafood-shop\\detail-3.avif\r\nGenerated public\\images\\spark-interfax\\cover.avif\r\nGenerated public\\images\\spark-interfax\\detail-1.avif\r\nGenerated public\\images\\spark-interfax\\detail-2.avif\r\nGenerated public\\images\\spark-interfax\\detail-3.avif\r\nGenerated public\\images\\visa-sk\\cover.avif\r\nGenerated public\\images\\visa-sk\\detail-1.avif\r\nGenerated public\\images\\visa-sk\\detail-2.avif\r\nGenerated public\\images\\visa-sk\\detail-3.avif\r\n$ tsc -b --noEmit \u0026\u0026 tsc -p tsconfig.test.json\r\n\u001B[36mvite v8.3.8 \u001B[32mbuilding client environment for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\u2713 2630 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\ndocs/in\n\u2026[truncated]",
+        "durationMs": 19618
       },
       {
         "name": "home-page-200",
@@ -76,8 +76,8 @@
         "skipped": false,
         "skippedReason": null,
         "exitCode": null,
-        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022ru\u0022\u003E\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/portfolio/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/portfolio/@vite/client\u0022\u003E\u003C/script\u003E\n\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\n    \u003Cmeta\n      name=\u0022description\u0022\n      content=\u0022Portfolio of a frontend developer focused on React, TypeScript, product interfaces, and shipping clear digital experiences.\u0022\n    /\u003E\n    \u003Ctitle\u003E\u0410\u043B\u0435\u043A\u0441\u0435\u0439 \u0412\u043E\u043B\u043A\u043E\u0432 \u2014 Frontend-\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0447\u0438\u043A\u003C/title\u003E\n  \u003C/head\u003E\n  \u003Cbody\u003E\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\n    \u003Cscript type=\u0022module\u0022 src=\u0022/portfolio/src/main.tsx\u0022\u003E\u003C/script\u003E\n  \u003C/body\u003E\n\u003C/html\u003E\n\n--- server output ---\n\u001B[2m15:28:51\u001B[22m \u001B[36m\u001B[1m[vite]\u001B[22m\u001B[39m \u001B[90m\u001B[2m(client)\u001B[22m\u001B[39m Re-optimizing dependencies because vite config has changed\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v8.3.8\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m352\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m5178\u001B[22m/portfolio/\u001B[39m\r\n",
-        "durationMs": 872
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\n\u003Chtml lang=\u0022ru\u0022\u003E\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/portfolio/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/portfolio/@vite/client\u0022\u003E\u003C/script\u003E\n\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\n    \u003Cmeta\n      name=\u0022description\u0022\n      content=\u0022Portfolio of a frontend developer focused on React, TypeScript, product interfaces, and shipping clear digital experiences.\u0022\n    /\u003E\n    \u003Ctitle\u003E\u0410\u043B\u0435\u043A\u0441\u0435\u0439 \u0412\u043E\u043B\u043A\u043E\u0432 \u2014 Frontend-\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0447\u0438\u043A\u003C/title\u003E\n  \u003C/head\u003E\n  \u003Cbody\u003E\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\n    \u003Cscript type=\u0022module\u0022 src=\u0022/portfolio/src/main.tsx\u0022\u003E\u003C/script\u003E\n  \u003C/body\u003E\n\u003C/html\u003E\n\n--- server output ---\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v8.3.8\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m284\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m5178\u001B[22m/portfolio/\u001B[39m\r\n",
+        "durationMs": 531
       }
     ],
     "executions": [
@@ -98,10 +98,10 @@
         "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
         "packageManagerVersion": "12.18.0",
         "cleanup": {
-          "RootProcessId": 30456,
+          "RootProcessId": 31788,
           "Completed": true,
           "ProcessesObserved": 7,
-          "ProcessesTerminated": 0,
+          "ProcessesTerminated": 1,
           "Failure": null
         }
       },
@@ -122,7 +122,7 @@
         "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
         "packageManagerVersion": "12.18.0",
         "cleanup": {
-          "RootProcessId": 11504,
+          "RootProcessId": 12124,
           "Completed": true,
           "ProcessesObserved": 11,
           "ProcessesTerminated": 1,
@@ -146,7 +146,7 @@
         "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
         "packageManagerVersion": "12.18.0",
         "cleanup": {
-          "RootProcessId": 18164,
+          "RootProcessId": 30440,
           "Completed": true,
           "ProcessesObserved": 9,
           "ProcessesTerminated": 1,
@@ -170,7 +170,7 @@
         "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
         "packageManagerVersion": "12.18.0",
         "cleanup": {
-          "RootProcessId": 8816,
+          "RootProcessId": 5092,
           "Completed": true,
           "ProcessesObserved": 8,
           "ProcessesTerminated": 1,
@@ -194,7 +194,7 @@
         "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
         "packageManagerVersion": "12.18.0",
         "cleanup": {
-          "RootProcessId": 2756,
+          "RootProcessId": 4276,
           "Completed": true,
           "ProcessesObserved": 26,
           "ProcessesTerminated": 1,
@@ -223,10 +223,10 @@
         "packageManagerExecutable": "C:\\Users\\Ava\\AppData\\Local\\pnpm\\bin\\pnpm.EXE",
         "packageManagerVersion": "12.18.0",
         "cleanup": {
-          "RootProcessId": 25808,
+          "RootProcessId": 27804,
           "Completed": true,
-          "ProcessesObserved": 7,
-          "ProcessesTerminated": 6,
+          "ProcessesObserved": 8,
+          "ProcessesTerminated": 7,
           "Failure": null
         }
       }

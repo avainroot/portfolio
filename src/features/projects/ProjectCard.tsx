@@ -32,8 +32,6 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
       whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.42, delay: index * 0.06 }}
-      whileHover={shouldReduceMotion ? undefined : { y: -5 }}
-      whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
       className="h-full"
     >
       <Card className="group relative flex h-full flex-col overflow-hidden border-border/70 bg-background/35 transition-colors duration-300 hover:bg-surface/75">
