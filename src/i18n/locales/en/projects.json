@@ -13,7 +13,7 @@
     "seafood-shop": {
       "shortDescription": "Frontend development of an e-commerce website from scratch using Next.js and React, integrated with 1C-Bitrix through a REST API.",
       "description": "An online seafood store featuring a product catalog, shopping cart, and checkout. The frontend is built with Next.js and React, with store data and operations integrated with 1C-Bitrix through a REST API.",
-      "contribution": "Developed the store frontend from scratch, implementing the product catalog, shopping cart, and checkout flow. Built reusable components and integrated the interface with the 1C-Bitrix API. Used SSR and React Server Components. Proposed Embla Carousel as an alternative to Swiper to avoid issues caused by Swiper's global styles."
+      "contribution": "Developed the store frontend from scratch, implementing the product catalog, shopping cart, and checkout flow. Built reusable components and integrated the interface with the 1C-Bitrix API. Used SSR and React Server Components."
     }
   }
 }
