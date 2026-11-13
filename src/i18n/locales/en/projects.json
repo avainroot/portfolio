@@ -1,24 +1,19 @@
 {
   "projects": {
     "nsign": {
-      "role": "Frontend Developer",
-      "period": "July — September 2026",
-      "shortDescription": "React SPA migration to Next.js 16 and typed API integration.",
-      "description": "Worked on migrating the application from a React SPA to Next.js 16, updating state management, and integrating with the API.",
-      "contribution": "Migrated state management from Redux to Zustand and TanStack Query, set up typed API integration with hey-api/OpenAPI, and worked on SSR optimization."
+      "shortDescription": "Migration of an existing React SPA to Next.js 16, including frontend architecture, state management, and data fetching improvements.",
+      "description": "Nsign's web application, migrated from a React SPA to Next.js 16. The main goals were to introduce server-side rendering and improve SEO.",
+      "contribution": "Independently migrated the frontend to Next.js 16 and reworked state management, using Zustand for client state and TanStack Query for server data. Set up a type-safe API client generated from the OpenAPI specification with hey-api. Identified slow API requests affecting SSR response times and adjusted the data-fetching strategy by moving a heavy request out of the critical server-rendering path."
     },
     "harbour-space": {
-      "role": "Frontend Developer",
-      "shortDescription": "The Harbour.Space blog built with Next.js and Strapi.",
-      "description": "I worked on the blog's main pages and contributed to its migration to Next.js, initiated to improve SEO. Blog content is managed in Strapi, with the backend developed collaboratively.",
-      "contribution": "I built the blog's main pages and initiated the Next.js migration for SEO. I also worked with the team on the Strapi backend; my contribution to the project was approximately 40%."
+      "shortDescription": "Frontend development and maintenance of the Harbour.Space blog using React and Next.js, integrated with Strapi CMS.",
+      "description": "A content blog for the Harbour.Space educational platform. The project uses Strapi as its CMS and a separate frontend to display articles and retrieve content through the REST API.",
+      "contribution": "Worked with the team on frontend development using React and contributed to the backend built with Strapi. Proposed migrating to Next.js to improve SEO and independently migrated the frontend, implementing server-side rendering."
     },
     "seafood-shop": {
-      "role": "Frontend Developer",
-      "period": "Aug 2024 — Feb 2025",
-      "shortDescription": "Catalog, cart, and checkout for a headless storefront.",
-      "description": "I worked on the frontend of a Headless Bitrix store: the catalog, product cards, cart, and checkout. The project used Next.js 14→15, React 18/19 RC, and SSR/RSC.",
-      "contribution": "I worked on the catalog, product cards, cart, and checkout, as well as the Next.js 14→15 update and server-rendered flows."
+      "shortDescription": "Frontend development of an e-commerce website from scratch using Next.js and React, integrated with 1C-Bitrix through a REST API.",
+      "description": "An online seafood store featuring a product catalog, shopping cart, and checkout. The frontend is built with Next.js and React, with store data and operations integrated with 1C-Bitrix through a REST API.",
+      "contribution": "Developed the store frontend from scratch, implementing the product catalog, shopping cart, and checkout flow. Built reusable components and integrated the interface with the 1C-Bitrix API. Used SSR and React Server Components. Proposed Embla Carousel as an alternative to Swiper to avoid issues caused by Swiper's global styles."
     }
   }
 }

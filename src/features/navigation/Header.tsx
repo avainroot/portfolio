@@ -18,7 +18,7 @@ export function Header({ language, onToggleLanguage }: HeaderProps) {
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-page items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-8 lg:px-10">
         <div className="flex items-center gap-3 sm:gap-4">
-          <div className="flex shrink-0 flex-col text-[13px] font-semibold uppercase leading-[1.15] tracking-tight text-accent sm:text-sm sm:leading-[1.25]">
+          <div className="flex shrink-0 flex-col text-[13px] font-semibold uppercase leading-none tracking-tight text-accent sm:text-sm">
             <span className={language === 'en' ? 'tracking-[0.027em]' : undefined}>
               {t('header.firstName')}
             </span>

@@ -156,16 +156,15 @@ docs/
 Структура проекта должна поддерживать:
 
 - Стабильный идентификатор.
-- Порядковый номер.
 - Название.
 - Компанию.
+- Ссылку на сайт компании, если она известна.
 - Период.
-- Ключ перевода роли.
 - Ключ краткого описания.
 - Ключ подробного описания.
 - Ключ описания личного вклада.
 - Список технологий.
-- Ссылку на публичный сайт.
+- Ссылку на публичный сайт проекта.
 - Обложку.
 - Галерею изображений.
 
@@ -174,11 +173,9 @@ docs/
 ```ts
 export interface Project {
   id: string;
-  number: string;
   title: string;
-  company?: string;
-  period?: string;
-  roleKey: string;
+  company: string;
+  companyUrl?: string;
   shortDescriptionKey: string;
   descriptionKey: string;
   contributionKey: string;

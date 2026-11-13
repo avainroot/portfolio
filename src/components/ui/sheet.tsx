@@ -35,7 +35,7 @@ const SheetContent = React.forwardRef<
     <SheetPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed inset-y-0 right-0 z-50 flex w-full max-w-190 flex-col border-l border-border bg-background p-0 shadow-2xl will-change-transform data-[state=closed]:animate-sheet-out data-[state=open]:animate-sheet-in sm:max-w-sheet md:max-w-170 max-sm:max-w-full',
+        'fixed inset-y-0 right-0 z-50 flex w-full max-w-[85vw] flex-col border-l border-border bg-background p-0 shadow-2xl will-change-transform data-[state=closed]:animate-sheet-out data-[state=open]:animate-sheet-in sm:max-w-sheet md:max-w-[85vw] lg:max-w-[min(65vw,760px)] max-sm:max-w-full',
         className,
       )}
       {...props}

@@ -5,11 +5,9 @@ const base = import.meta.env.BASE_URL
 export const projects: Project[] = [
   {
     id: 'nsign',
-    number: '01',
     title: 'Nsign',
     company: 'Nsign',
-    periodKey: 'nsign.period',
-    roleKey: 'nsign.role',
+    companyUrl: 'https://nsign.ru/',
     shortDescriptionKey: 'nsign.shortDescription',
     descriptionKey: 'nsign.description',
     contributionKey: 'nsign.contribution',
@@ -25,10 +23,9 @@ export const projects: Project[] = [
   },
   {
     id: 'harbour-space',
-    number: '02',
     title: 'Harbour.Space Blog',
     company: 'Harbour.Space',
-    roleKey: 'harbour-space.role',
+    companyUrl: 'https://harbour.space/',
     shortDescriptionKey: 'harbour-space.shortDescription',
     descriptionKey: 'harbour-space.description',
     contributionKey: 'harbour-space.contribution',
@@ -44,11 +41,9 @@ export const projects: Project[] = [
   },
   {
     id: 'seafood-shop',
-    number: '03',
     title: 'Seafood Shop',
-    company: 'Seafood Shop',
-    periodKey: 'seafood-shop.period',
-    roleKey: 'seafood-shop.role',
+    company: 'СЕМПРОГРУПП',
+    companyUrl: 'https://spg-agency.ru/',
     shortDescriptionKey: 'seafood-shop.shortDescription',
     descriptionKey: 'seafood-shop.description',
     contributionKey: 'seafood-shop.contribution',

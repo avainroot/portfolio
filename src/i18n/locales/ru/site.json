@@ -4,7 +4,7 @@
       "firstName": "Алексей",
       "lastName": "Волков",
       "role": "Frontend-разработчик",
-      "stack": "React, TypeScript, Next.js",
+      "stack": "React, TypeScript, Next.js, AI",
       "language": "RU",
       "projects": "Проекты"
     },
@@ -13,7 +13,7 @@
     },
     "about": {
       "title": "О себе",
-      "body": "Frontend-разработчик. Основной стек — React, TypeScript и Next.js. В работе уделяю внимание структуре интерфейса, понятным сценариям и аккуратной интеграции с API."
+      "body": "Frontend-разработчик. Основной стек — React, TypeScript и Next.js. Разрабатываю веб-приложения, проектирую frontend-архитектуру и интегрирую API. Использую AI-инструменты для исследования, проработки технических решений и работы с кодом."
     },
     "contact": {
       "title": "Контакты",
@@ -21,9 +21,8 @@
     },
     "footer": "Сделано для портфолио",
     "project": {
-      "role": "Роль",
-      "description": "Описание",
-      "contribution": "Личный вклад",
+      "description": "О проекте",
+      "contribution": "Мой вклад",
       "technologies": "Технологии",
       "website": "Сайт проекта",
       "previous": "Предыдущий",

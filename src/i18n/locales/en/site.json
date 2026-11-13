@@ -4,7 +4,7 @@
       "firstName": "Alexey",
       "lastName": "Volkov",
       "role": "Frontend developer",
-      "stack": "React, TypeScript, Next.js",
+      "stack": "React, TypeScript, Next.js, AI",
       "language": "EN",
       "projects": "Projects"
     },
@@ -13,7 +13,7 @@
     },
     "about": {
       "title": "About",
-      "body": "Frontend developer focused on React, TypeScript, and Next.js. I pay attention to clear interface structure, straightforward user flows, and careful API integration."
+      "body": "Frontend Developer. My primary stack is React, TypeScript, and Next.js. I build web applications, design frontend architecture, and integrate APIs. I use AI tools for research, exploring technical solutions, and working with code."
     },
     "contact": {
       "title": "Contact",
@@ -21,9 +21,8 @@
     },
     "footer": "Portfolio",
     "project": {
-      "role": "Role",
-      "description": "Description",
-      "contribution": "Contribution",
+      "description": "About the project",
+      "contribution": "My contribution",
       "technologies": "Technologies",
       "website": "Project website",
       "previous": "Previous",

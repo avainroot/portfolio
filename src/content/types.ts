@@ -1,11 +1,8 @@
 export interface Project {
   id: string
-  number: string
   title: string
-  company?: string
-  period?: string
-  periodKey?: string
-  roleKey: string
+  company: string
+  companyUrl?: string
   shortDescriptionKey: string
   descriptionKey: string
   contributionKey: string

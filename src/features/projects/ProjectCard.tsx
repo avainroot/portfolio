@@ -36,36 +36,40 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
       whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
       className="h-full"
     >
-      <Card className="group relative flex h-full flex-col overflow-hidden">
+      <Card className="group relative flex h-full flex-col overflow-hidden border-border/70 bg-background/35 transition-colors duration-300 hover:bg-surface/75">
         <AppImage
           src={project.cover}
           alt={project.title}
-          className="w-full shrink-0 rounded-none border-b border-border bg-surface-muted"
+          className="w-full shrink-0 rounded-none border-b border-border/70 bg-surface-muted"
         />
 
-        <CardHeader className="gap-4">
-          <div className="flex items-center justify-between gap-3">
-            <span className="font-mono text-caption uppercase tracking-editorial text-secondary">
-              {project.number}
-            </span>
-            <Badge variant="secondary">{t(project.roleKey, { ns: 'projects' })}</Badge>
-          </div>
-
-          <CardTitle className="text-2xl">{project.title}</CardTitle>
-          <CardDescription>{t(project.shortDescriptionKey, { ns: 'projects' })}</CardDescription>
+        <CardHeader className="gap-2">
+          <CardTitle className="text-xl sm:text-2xl">{project.title}</CardTitle>
+          <p className="font-mono text-micro uppercase tracking-editorial text-secondary">
+            {project.company}
+          </p>
+          <CardDescription className="pt-2">
+            {t(project.shortDescriptionKey, { ns: 'projects' })}
+          </CardDescription>
         </CardHeader>
 
-        <CardContent className="flex flex-wrap gap-2">
+        <CardContent className="flex flex-wrap gap-1.5">
           {project.technologies.slice(0, 4).map((technology) => (
-            <Badge key={technology} variant="outline">
-              {technology}
+            <Badge
+              key={technology}
+              variant="outline"
+              className="px-2 py-0.5 text-[9px] tracking-[0.06em] text-secondary/90"
+            >
+              <span className="relative top-px">{technology}</span>
             </Badge>
           ))}
         </CardContent>
 
         <CardFooter className="relative mt-auto justify-between pt-4 text-sm text-primary transition-colors group-hover:text-accent">
           <Separator className="absolute inset-x-0 top-0" />
-          <span>{t('common.viewProject', { defaultValue: 'View project' })}</span>
+          <span className="relative top-px">
+            {t('common.viewProject', { defaultValue: 'View project' })}
+          </span>
           <ArrowUpRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </CardFooter>
 

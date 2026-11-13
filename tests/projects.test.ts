@@ -41,20 +41,47 @@ describe('project content', () => {
     expect(new Set(projectIds).size).toBe(projects.length)
 
     for (const project of projects) {
-      const keys = [
-        project.roleKey,
-        project.shortDescriptionKey,
-        project.descriptionKey,
-        project.contributionKey,
-        ...(project.periodKey ? [project.periodKey] : []),
-      ]
+      const keys = [project.shortDescriptionKey, project.descriptionKey, project.contributionKey]
 
       for (const translationsForLocale of translations) {
         for (const key of keys) {
           expect(getTranslation(translationsForLocale, key)).toBeTypeOf('string')
         }
       }
+
+      expect(project.company.trim()).not.toBe('')
+      expect(project.companyUrl).toMatch(/^https:\/\//)
     }
+  })
+
+  it('uses the correct company and project websites', () => {
+    expect(
+      projects.map(({ id, company, companyUrl, website }) => ({
+        id,
+        company,
+        companyUrl,
+        website,
+      })),
+    ).toEqual([
+      {
+        id: 'nsign',
+        company: 'Nsign',
+        companyUrl: 'https://nsign.ru/',
+        website: 'https://nsign.ru/',
+      },
+      {
+        id: 'harbour-space',
+        company: 'Harbour.Space',
+        companyUrl: 'https://harbour.space/',
+        website: 'https://harbour.space/articles/home',
+      },
+      {
+        id: 'seafood-shop',
+        company: 'СЕМПРОГРУПП',
+        companyUrl: 'https://spg-agency.ru/',
+        website: 'https://seafood-shop.ru/',
+      },
+    ])
   })
 
   it('references original screenshots for every card and gallery image', () => {

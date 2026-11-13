@@ -36,7 +36,6 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
   const currentIndex = projects.findIndex((entry) => entry.id === activeProjectId)
   const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
-  const period = project.periodKey ? t(project.periodKey, { ns: 'projects' }) : project.period
 
   useLayoutEffect(() => {
     if (scrollViewportRef.current) {
@@ -54,9 +53,20 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
         <div className="shrink-0 border-b border-border px-5 pb-3 pt-4 pr-14">
           <SheetHeader>
             <SheetTitle className="text-xl text-primary sm:text-2xl">{project.title}</SheetTitle>
-            <SheetDescription className="text-xs text-secondary sm:text-sm">
-              {project.company ?? project.title}
-              {period ? ` · ${period}` : ''}
+            <SheetDescription className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-secondary sm:text-sm">
+              {project.companyUrl ? (
+                <a
+                  href={project.companyUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-accent transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                  {project.company}
+                  <ArrowUpRight aria-hidden="true" className="h-3 w-3" />
+                </a>
+              ) : (
+                <span>{project.company}</span>
+              )}
             </SheetDescription>
           </SheetHeader>
         </div>
@@ -72,14 +82,7 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
                 <div className="space-y-6">
                   <div>
                     <div className="mb-2 font-mono text-caption uppercase tracking-editorial text-secondary">
-                      {t('project.role', { defaultValue: 'Role' })}
-                    </div>
-                    <p className="text-lg text-primary">{t(project.roleKey, { ns: 'projects' })}</p>
-                  </div>
-
-                  <div>
-                    <div className="mb-2 font-mono text-caption uppercase tracking-editorial text-secondary">
-                      {t('project.description', { defaultValue: 'Description' })}
+                      {t('project.description', { defaultValue: 'About the project' })}
                     </div>
                     <p className="leading-7 text-primary/80">
                       {t(project.descriptionKey, { ns: 'projects' })}
@@ -101,16 +104,21 @@ export function ProjectSheet({ project, isOpen, onClose }: ProjectSheetProps) {
                     <div className="mb-2 font-mono text-caption uppercase tracking-editorial text-secondary">
                       {t('project.technologies', { defaultValue: 'Technologies' })}
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <ul className="flex flex-wrap gap-1.5">
                       {project.technologies.map((technology) => (
-                        <Badge key={technology} variant="outline">
-                          {technology}
-                        </Badge>
+                        <li key={technology}>
+                          <Badge
+                            variant="outline"
+                            className="px-2 py-0.5 text-[9px] tracking-[0.06em] text-secondary/90"
+                          >
+                            <span className="relative top-px">{technology}</span>
+                          </Badge>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
 
-                  {project.website && (
+                  {project.website && project.website !== project.companyUrl && (
                     <Button
                       asChild
                       variant="outline"
