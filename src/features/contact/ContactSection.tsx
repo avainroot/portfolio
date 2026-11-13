@@ -46,7 +46,7 @@ function ContactIcon({ label }: { label: string }) {
   const Icon =
     label === 'Telegram'
       ? Send
-      : label === 'HH.ru'
+      : label === 'Resume'
         ? BriefcaseBusiness
         : label === 'GitHub'
           ? GitBranch
